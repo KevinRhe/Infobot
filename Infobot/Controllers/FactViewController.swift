@@ -19,6 +19,7 @@ class FactViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Fact card data
         facts = [
             FactModel(title: "Definition", description: "This is definition description", image: #imageLiteral(resourceName: "definition")),
             FactModel(title: "Former Word", description: "This is former word description", image: #imageLiteral(resourceName: "definition")),
@@ -26,6 +27,17 @@ class FactViewController: UIViewController {
             FactModel(title: "Benefits", description: "This is benefits description", image: #imageLiteral(resourceName: "definition"))
         ]
         
+        // Set page control dots count
+        pageControl.numberOfPages = facts.count
+        
+        // Page control click event
+        pageControl.addTarget(self, action: #selector(pageControlSelectionAction(sender:)), for: UIControl.Event.valueChanged)
+        
+    }
+    
+    @objc func pageControlSelectionAction(sender: Any) {
+        let xVal = CGFloat(pageControl.currentPage) * collectionView.frame.size.width
+        collectionView.setContentOffset(CGPoint(x: xVal, y: 0), animated: true)
     }
 
 }
