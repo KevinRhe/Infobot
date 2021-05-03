@@ -26,7 +26,7 @@ class HistoryViewController: UIViewController {
 
 }
 
-extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return histories.count
     }
@@ -36,5 +36,9 @@ extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         cell.setup(histories[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
 }
