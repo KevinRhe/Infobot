@@ -13,9 +13,6 @@ class CategoryViewController: UIViewController {
     
     @IBOutlet weak var categoryTable: UITableView!
     
-    var currentRecord = 0
-    var currentCard = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +28,7 @@ class CategoryViewController: UIViewController {
 extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 260
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -58,6 +55,17 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = .white
+    }
+    
+    func navigateToDetail() {
+//        performSegue(withIdentifier: "showDetail", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailViewController {
+            destination.image = categories[currentTag].images[currentRow]
+            destination.titleLbl = categories[currentTag].titles[currentRow]
+        }
     }
     
 }

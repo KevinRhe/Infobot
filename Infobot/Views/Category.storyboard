@@ -105,11 +105,20 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="categoryTable" destination="prn-bA-H16" id="62d-rc-8PF"/>
+                        <segue destination="ilL-Wd-jzd" kind="presentation" identifier="showDetail" id="YQ9-7C-ybw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="109"/>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="4j1-98-4Qc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="ilL-Wd-jzd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kp0-DZ-lg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="108"/>
         </scene>
     </scenes>
     <resources>
