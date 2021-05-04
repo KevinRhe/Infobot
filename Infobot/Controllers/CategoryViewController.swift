@@ -60,8 +60,4 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         view.tintColor = .white
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
-    }
-    
 }

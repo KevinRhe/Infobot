@@ -7,8 +7,10 @@
 
 import UIKit
 
+var currentTag = 0
+var currentRow = 0
+
 class CategoryTableViewCell: UITableViewCell {
-    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -46,7 +48,10 @@ extension CategoryTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
+//        print("tag: \(collectionView.tag)")
+//        print("index path: \(indexPath)")
+        currentTag = collectionView.tag
+        currentRow = indexPath.row
     }
     
 }
