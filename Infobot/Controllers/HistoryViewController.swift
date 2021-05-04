@@ -11,7 +11,13 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    // Card transition manager
+    let transitionManaager = CardTransitionManager()
+    
+    // Initialize array for HistoryModel
     var histories: [HistoryModel] = []
+    
+    var currentHistory = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,5 +46,17 @@ extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        currentHistory = indexPath.row
+        performSegue(withIdentifier: "showDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailViewController {
+            destination.image = histories[currentHistory].image
+            destination.titleLbl = histories[currentHistory].year
+        }
     }
 }

@@ -13,6 +13,9 @@ class CategoryViewController: UIViewController {
     
     @IBOutlet weak var categoryTable: UITableView!
     
+    var currentRecord = 0
+    var currentCard = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,6 +58,10 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = .white
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
     }
     
 }

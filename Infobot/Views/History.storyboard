@@ -89,11 +89,22 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="Jt4-2N-8Cn" id="kMZ-E4-S1N"/>
+                        <segue destination="9k6-Zv-5gT" kind="presentation" identifier="showDetail" id="tQX-bb-Cew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="DsD-58-tFe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="9k6-Zv-5gT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QWb-ry-ywS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZy-17-HEn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="794" y="108"/>
         </scene>
     </scenes>
     <resources>
