@@ -47,6 +47,7 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = categoryTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CategoryTableViewCell
         
+        cell.detailDelegate = self
         cell.collectionView.tag = indexPath.section
         
         return cell
@@ -56,16 +57,20 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = .white
     }
-    
-    func navigateToDetail() {
-//        performSegue(withIdentifier: "showDetail", sender: self)
-    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailViewController {
             destination.image = categories[currentTag].images[currentRow]
             destination.titleLbl = categories[currentTag].titles[currentRow]
         }
+    }
+    
+}
+
+extension CategoryViewController: DetailDelegate {
+    
+    func navigateToDetail() {
+        performSegue(withIdentifier: "showDetail", sender: self)
     }
     
 }

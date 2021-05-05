@@ -15,6 +15,7 @@
 		C91910372640E71900C5F50A /* CardTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91910362640E71900C5F50A /* CardTransitionManager.swift */; };
 		C919103D2640ECD200C5F50A /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C919103C2640ECD200C5F50A /* Detail.storyboard */; };
 		C919103F2640ED7E00C5F50A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C919103E2640ED7E00C5F50A /* DetailViewController.swift */; };
+		C919104A26428CBE00C5F50A /* DetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C919104926428CBE00C5F50A /* DetailDelegate.swift */; };
 		C9C2F1A7263E723D008E0733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2F1A6263E723D008E0733 /* AppDelegate.swift */; };
 		C9C2F1A9263E723D008E0733 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2F1A8263E723D008E0733 /* SceneDelegate.swift */; };
 		C9C2F1AB263E723D008E0733 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2F1AA263E723D008E0733 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		C91910362640E71900C5F50A /* CardTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransitionManager.swift; sourceTree = "<group>"; };
 		C919103C2640ECD200C5F50A /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		C919103E2640ED7E00C5F50A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C919104926428CBE00C5F50A /* DetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDelegate.swift; sourceTree = "<group>"; };
 		C9C2F1A3263E723D008E0733 /* Infobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Infobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C2F1A6263E723D008E0733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9C2F1A8263E723D008E0733 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 			path = Transitions;
 			sourceTree = "<group>";
 		};
+		C919104826428C9E00C5F50A /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C919104926428CBE00C5F50A /* DetailDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		C9C2F19A263E723D008E0733 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 		C9C2F1A5263E723D008E0733 /* Infobot */ = {
 			isa = PBXGroup;
 			children = (
+				C919104826428C9E00C5F50A /* Delegates */,
 				C91910352640E6E100C5F50A /* Transitions */,
 				C9C2F1BC263E727A008E0733 /* Controllers */,
 				C9C2F1BB263E726D008E0733 /* Views */,
@@ -242,6 +253,7 @@
 				C9C2F1C4263EE656008E0733 /* FactModel.swift in Sources */,
 				C91910302640536800C5F50A /* CategoryCollectionViewCell.swift in Sources */,
 				C9191034264054EA00C5F50A /* CategoryViewController.swift in Sources */,
+				C919104A26428CBE00C5F50A /* DetailDelegate.swift in Sources */,
 				C9C2F1CB263FB8DB008E0733 /* HistoryViewController.swift in Sources */,
 				C9C2F1A9263E723D008E0733 /* SceneDelegate.swift in Sources */,
 			);

@@ -14,6 +14,8 @@ class CategoryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    weak var detailDelegate: DetailDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -48,11 +50,11 @@ extension CategoryTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("tag: \(collectionView.tag)")
-        print("index path: \(indexPath)")
+//        print("tag: \(collectionView.tag)")
+//        print("index path: \(indexPath)")
         currentTag = collectionView.tag
         currentRow = indexPath.row
-        CategoryViewController().navigateToDetail()
+        detailDelegate?.navigateToDetail()
     }
     
 }
