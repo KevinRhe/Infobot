@@ -17,8 +17,9 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         
         categories = [
-            CategoryModel(category: "Power Source", images: [#imageLiteral(resourceName: "electric"), #imageLiteral(resourceName: "hydraulic-jack"), #imageLiteral(resourceName: "nuclear")], titles: ["Electric", "Hydraulic", "Nuclear"]),
-            CategoryModel(category: "Application", images: [#imageLiteral(resourceName: "nuclear"), #imageLiteral(resourceName: "electric")], titles: ["Nuclear", "Electric"])
+            CategoryModel(category: "Based on The Power Source", images: [#imageLiteral(resourceName: "electric"), #imageLiteral(resourceName: "hydraulic-jack"), #imageLiteral(resourceName: "nuclear"), #imageLiteral(resourceName: "green")], titles: ["Electrical", "Hydraulic", "Nuclear", "Green Energy"]),
+            CategoryModel(category: "Based on Their Application", images: [#imageLiteral(resourceName: "industrial-robot"), #imageLiteral(resourceName: "exploration-robot"), #imageLiteral(resourceName: "hydraulic-jack"), #imageLiteral(resourceName: "electric"), #imageLiteral(resourceName: "hydraulic-jack"), #imageLiteral(resourceName: "electric")], titles: ["Industrial", "Exploration", "Consumer", "Medical", "Aerospace", "Aquatic"]),
+            CategoryModel(category: "Based on Movement", images: [#imageLiteral(resourceName: "wheeled-robot"), #imageLiteral(resourceName: "legged-robot"), #imageLiteral(resourceName: "electric"), #imageLiteral(resourceName: "hydraulic-jack")], titles: ["Wheeled", "Legged", "Swimming", "Flying"])
         ]
         
     }

@@ -10,4 +10,6 @@ import UIKit
 struct HistoryModel {
     let year: String
     let image: UIImage
+    let title: String
+    let detail: String
 }

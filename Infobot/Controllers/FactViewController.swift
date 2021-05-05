@@ -22,7 +22,7 @@ class FactViewController: UIViewController {
         // Fact card data
         facts = [
             FactModel(title: "Definition", description: "Robot is a machine that can perform a complicated series of tasks by itself", image: #imageLiteral(resourceName: "definition")),
-            FactModel(title: "Origin of The Term ‘Robot’", description: "The word ‘robot’ derives from the Czech word “robota,” or forced labor, as done by serfs.", image: #imageLiteral(resourceName: "definition"))
+            FactModel(title: "Origin of The Term ‘Robot’", description: "The word ‘robot’ derives from the Czech word “robota,” or forced labor, as done by serfs.", image: #imageLiteral(resourceName: "origin"))
         ]
         
         // Set page control dots count
