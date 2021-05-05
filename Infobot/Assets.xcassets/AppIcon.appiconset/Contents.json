@@ -1,11 +1,13 @@
 {
   "images" : [
     {
+      "filename" : "icon-2.jpg",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "icon.jpg",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
@@ -46,6 +48,7 @@
       "size" : "20x20"
     },
     {
+      "filename" : "icon-3.jpg",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
