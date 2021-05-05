@@ -10,9 +10,6 @@ import UIKit
 class HistoryViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-
-    // Card transition manager
-    let transitionManaager = CardTransitionManager()
     
     // Initialize array for HistoryModel
     var histories: [HistoryModel] = []

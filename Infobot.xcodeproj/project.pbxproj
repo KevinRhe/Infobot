@@ -12,7 +12,6 @@
 		C91910302640536800C5F50A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C919102F2640536800C5F50A /* CategoryCollectionViewCell.swift */; };
 		C91910322640547300C5F50A /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91910312640547300C5F50A /* CategoryModel.swift */; };
 		C9191034264054EA00C5F50A /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9191033264054EA00C5F50A /* CategoryViewController.swift */; };
-		C91910372640E71900C5F50A /* CardTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91910362640E71900C5F50A /* CardTransitionManager.swift */; };
 		C919103D2640ECD200C5F50A /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C919103C2640ECD200C5F50A /* Detail.storyboard */; };
 		C919103F2640ED7E00C5F50A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C919103E2640ED7E00C5F50A /* DetailViewController.swift */; };
 		C919104A26428CBE00C5F50A /* DetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C919104926428CBE00C5F50A /* DetailDelegate.swift */; };
@@ -38,7 +37,6 @@
 		C919102F2640536800C5F50A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		C91910312640547300C5F50A /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		C9191033264054EA00C5F50A /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		C91910362640E71900C5F50A /* CardTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransitionManager.swift; sourceTree = "<group>"; };
 		C919103C2640ECD200C5F50A /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		C919103E2640ED7E00C5F50A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C919104926428CBE00C5F50A /* DetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDelegate.swift; sourceTree = "<group>"; };
@@ -71,14 +69,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C91910352640E6E100C5F50A /* Transitions */ = {
-			isa = PBXGroup;
-			children = (
-				C91910362640E71900C5F50A /* CardTransitionManager.swift */,
-			);
-			path = Transitions;
-			sourceTree = "<group>";
-		};
 		C919104826428C9E00C5F50A /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				C919104826428C9E00C5F50A /* Delegates */,
-				C91910352640E6E100C5F50A /* Transitions */,
 				C9C2F1BC263E727A008E0733 /* Controllers */,
 				C9C2F1BB263E726D008E0733 /* Views */,
 				C9C2F1BA263E7253008E0733 /* Models */,
@@ -240,7 +229,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C91910372640E71900C5F50A /* CardTransitionManager.swift in Sources */,
 				C9C2F1CD263FC669008E0733 /* HistoryModel.swift in Sources */,
 				C91910322640547300C5F50A /* CategoryModel.swift in Sources */,
 				C9C2F1C2263ED02A008E0733 /* FactViewController.swift in Sources */,
