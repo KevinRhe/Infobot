@@ -47,7 +47,7 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = categoryTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CategoryTableViewCell
         
-        cell.detailDelegate = self
+//        cell.detailDelegate = self
         cell.collectionView.tag = indexPath.section
         
         return cell

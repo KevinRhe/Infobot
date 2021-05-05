@@ -21,10 +21,8 @@ class FactViewController: UIViewController {
         
         // Fact card data
         facts = [
-            FactModel(title: "Definition", description: "This is definition description", image: #imageLiteral(resourceName: "definition")),
-            FactModel(title: "Former Word", description: "This is former word description", image: #imageLiteral(resourceName: "definition")),
-            FactModel(title: "3 Law", description: "This is 3 law description", image: #imageLiteral(resourceName: "definition")),
-            FactModel(title: "Benefits", description: "This is benefits description", image: #imageLiteral(resourceName: "definition"))
+            FactModel(title: "Definition", description: "Robot is a machine that can perform a complicated series of tasks by itself", image: #imageLiteral(resourceName: "definition")),
+            FactModel(title: "Origin of The Term ‘Robot’", description: "The word ‘robot’ derives from the Czech word “robota,” or forced labor, as done by serfs.", image: #imageLiteral(resourceName: "definition"))
         ]
         
         // Set page control dots count
