@@ -26,7 +26,9 @@ class HistoryViewController: UIViewController {
             HistoryModel(year: "1991", image: #imageLiteral(resourceName: "history-1991-2"), title: "Honda P Series", detail: "The P series is a chronological progression of prototype humanoid robots as developed by Honda.")
         ]
         
-        collectionView.register(UINib(nibName: "HistoryCell", bundle: nil), forCellWithReuseIdentifier: "historyIdentifier")
+        collectionView.register(HistoryCollectionViewCell.nib(), forCellWithReuseIdentifier: HistoryCollectionViewCell.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
     }
 
@@ -38,15 +40,28 @@ extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "historyIdentifier", for: indexPath) as! HistoryCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HistoryCollectionViewCell.identifier, for: indexPath) as! HistoryCollectionViewCell
         
         cell.setup(histories[indexPath.row])
+        cell.layer.cornerRadius = 27.0
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        return CGSize(width: 304, height: 476)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: 40, height: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: 40, height: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 25
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

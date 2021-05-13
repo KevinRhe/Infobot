@@ -1,22 +1,31 @@
 //
-//  HistoryCollectionViewCell.swift
+//  HistoryCell.swift
 //  Infobot
 //
-//  Created by Kevin Rheynaldi on 03/05/21.
+//  Created by Kevin Rheynaldi on 05/05/21.
 //
 
 import UIKit
 
 class HistoryCollectionViewCell: UICollectionViewCell {
+
+    @IBOutlet weak var historyImage: UIImageView!
+    @IBOutlet weak var historyYear: UILabel!
     
-//    static let identifier = String(describing: HistoryCollectionViewCell.self)
-//
-//    @IBOutlet weak var historyImageView: UIImageView!
-//    @IBOutlet weak var historyYearLbl: UILabel!
-//
-//    func setup(_ history: HistoryModel) {
-//        historyImageView.image = history.image
-//        historyYearLbl.text = history.year
-//    }
+    static let identifier = "HistoryCollectionViewCell"
     
+    static func nib() -> UINib {
+        return UINib(nibName: identifier, bundle: nil)
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    func setup(_ history: HistoryModel) {
+        historyImage.image = history.image
+        historyYear.text = history.year
+    }
+
 }
